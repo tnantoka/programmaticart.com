@@ -14,7 +14,7 @@
               <span class="article-list-date">
                 {{ page.date | date: "%B %-d, %Y" }}
               </span>
-              <span class="article-list-divider">-</span>
+              <!--span class="article-list-divider">-</span>
               <span class="article-list-minutes">
                 {% capture words %}
                   {{ page.content | number_of_words }}
@@ -28,12 +28,21 @@
                 {% for tag in page.tags %}
                   <a href="{{ 'tag/' | relative_url }}{{ tag }}">{{ tag }}</a>
                 {% endfor %}
-              </div>
+              </div-->
             </div>
           </header>
 
           <div class="article-content">
             {{ content }}
+
+            {% if page.refs %}
+              <h6>References</h6>
+              <ul style="list-style: none; padding-left: 0;">
+                {% for ref in page.refs %}
+                  <li><small><a href="{{ ref.href }}">{{ ref.text }}</a></small></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           </div>
 
           <div class="article-share">
