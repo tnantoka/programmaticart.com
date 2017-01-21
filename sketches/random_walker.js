@@ -35,6 +35,7 @@ function setup() {
   const canvas = createCanvas(650, 250)
   canvas.parent('random_walker')
   walker = new Walker()
+  canvas.mousePressed(onMousePressed)
 }
 
 function draw() {
@@ -42,7 +43,7 @@ function draw() {
   walker.display()
 }
 
-function mousePressed() {
+function onMousePressed() {
   stopped ? loop() : noLoop()
   stopped = !stopped
 }

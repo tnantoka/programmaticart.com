@@ -23,12 +23,13 @@ function setup() {
   const canvas = createCanvas(650, 250)
   canvas.parent('gapped_spiral')
   spiral = new Spiral()
+  canvas.mousePressed(onMousePressed)
 }
 
 function draw() {
   spiral.display()
 }
 
-function mousePressed() {
+function onMousePressed() {
   spiral = new Spiral()
 }
