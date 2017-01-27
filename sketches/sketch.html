@@ -5,15 +5,17 @@
 <body>
 <script src="p5.min.js"></script>
 <script>
-const name = 'chidori_pattern'
+const names = ['chidori', 'chidori_pattern']
 
 const p = document.createElement('p')
 p.id = name
 document.body.appendChild(p)
 
-const script = document.createElement('script')
-script.src = `${name}.js`
-document.body.appendChild(script)
+names.forEach(name => {
+  const script = document.createElement('script')
+  script.src = `${name}.js`
+  document.body.appendChild(script)
+})
 </script>
 </body>
 </html>

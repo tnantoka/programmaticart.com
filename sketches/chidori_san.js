@@ -1,56 +1,6 @@
 'use strict'
 
-class Chidori {
-  constructor(p, point, radius, startAngle) {
-    this.p = p
-    this.point = point
-    this.radius = radius 
-    this.startAngle = startAngle
-
-    p.stroke(0)
-  }
-
-  display() {
-    const points = []
-    for (let i = this.startAngle; i < 360 + this.startAngle; i += 120) {
-      const angle = this.p.radians(i) 
-      const x = this.point.x + this.p.cos(angle) * this.radius
-      const y = this.point.y + this.p.sin(angle) * this.radius
-      points.push({ x, y })
-    }
-    for (let i = 0; i < points.length; i++) {
-      const point1 = points[i]
-      const point2 = points[(i + 1) % points.length]
-
-      const dist = this.p.dist(point1.x, point1.y, point2.x, point2.y)
-      const center = { x: (point1.x + point2.x) / 2, y: (point1.y + point2.y) / 2 }
-
-      this.p.push()
-      this.p.translate(center.x, center.y)
-      const angle = this.p.atan2(point1.y - center.y, point1.x - center.x)
-      this.p.pop()
-
-      const radius = dist * 0.34
-      const control1 = {
-        x: center.x + this.p.cos(angle + this.p.radians(90)) * radius, 
-        y: center.y + this.p.sin(angle + this.p.radians(90)) * radius, 
-      }
-      const control2 = {
-        x: center.x + this.p.cos(angle + this.p.radians(270)) * radius, 
-        y: center.y + this.p.sin(angle + this.p.radians(270)) * radius, 
-      }
-
-      this.p.bezier(
-        point1.x, point1.y,
-        control1.x, control1.y,
-        control2.x, control2.y,
-        point2.x, point2.y
-      )
-    }
-  }
-}
-
-class Chidoris {
+class San {
   constructor(p) {
     this.p = p
     this.chidoris = []
@@ -85,10 +35,10 @@ class Chidoris {
 }
 
 var sketch = function(p) {
-  let chidoris
+  let san
 
   const init = () => {
-    chidoris = new Chidoris(p)
+    san = new San(p)
   }
   const mousePressed = () => {
     init()
@@ -102,7 +52,7 @@ var sketch = function(p) {
 
   p.draw = () => {
     p.clear()
-    chidoris.display()
+    san.display()
   }
 }
 

@@ -7,4 +7,5 @@ refs:
     href: http://topics.libra.titech.ac.jp/recordID/catalog.bib/BA5186116X
 ---
 
+{% include js.html name="chidori" %}
 {% include sketch.html name="chidori_pattern" %}
