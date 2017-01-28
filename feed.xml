@@ -1,20 +1,90 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Programmatic Art</title>
+    <description></description>
+    <link>http://programmaticart.com/</link>
+    <atom:link href="http://programmaticart.com//feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>White Ant</title>
+        <description>Mitchel Resnick's white ant.</description>
+        <pubDate>Sat, 28 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/white-ant</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/white-ant</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Quad Strip</title>
+        <description>Stripe with sine.</description>
+        <pubDate>Sat, 28 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/quad-strip</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/quad-strip</guid>
+      </item>
+    
+      <item>
+        <title>Circle Network</title>
+        <description>Network by circles.</description>
+        <pubDate>Sat, 28 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/circle-network</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/circle-network</guid>
+      </item>
+    
+      <item>
+        <title>Ant</title>
+        <description>Chris Langton's ant.</description>
+        <pubDate>Sat, 28 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/ant</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/ant</guid>
+      </item>
+    
+      <item>
+        <title>Chidori Stripe</title>
+        <description>Stripe with chidori.</description>
+        <pubDate>Fri, 27 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/chidori-stripe</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/chidori-stripe</guid>
+      </item>
+    
+      <item>
+        <title>Chidori San</title>
+        <description>The san with chidori and circle.</description>
+        <pubDate>Thu, 26 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/chidori-san</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/chidori-san</guid>
+      </item>
+    
+      <item>
+        <title>Chidori Pattern</title>
+        <description>Tessellation with chidori.</description>
+        <pubDate>Thu, 26 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/chidori-pattern</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/chidori-pattern</guid>
+      </item>
+    
+      <item>
+        <title>Cellular Automaton 2</title>
+        <description>2D cellular automaton.</description>
+        <pubDate>Tue, 24 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/cellular-automaton-2</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/cellular-automaton-2</guid>
+      </item>
+    
+      <item>
+        <title>Cellular Automaton</title>
+        <description>1D cellular automaton.</description>
+        <pubDate>Mon, 23 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/cellular-automaton</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/cellular-automaton</guid>
+      </item>
+    
+      <item>
+        <title>Arrow Particle</title>
+        <description>Chaos particles with arrow and circles.</description>
+        <pubDate>Sun, 22 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://programmaticart.com//posts/arrow-particle</link>
+        <guid isPermaLink="true">http://programmaticart.com//posts/arrow-particle</guid>
+      </item>
+    
   </channel>
 </rss>
